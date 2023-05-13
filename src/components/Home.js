@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <Container>
       <Title>Welcome to My Portfolio</Title>
-      <Subtitle>My name is Muhammad Bilal and I'm a Front -end Developer.</Subtitle>
+      <Subtitle>My name is Bilal and I'm a Front -end Developer.</Subtitle>
       <Button>View My Work</Button>
     </Container>
   );
