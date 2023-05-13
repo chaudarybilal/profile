@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -7,6 +8,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color:rgb(64, 104, 130);
+  
 `;
 
 const Title = styled.h1`
@@ -42,8 +45,10 @@ const Home = () => {
   return (
     <Container>
       <Title>Welcome to My Portfolio</Title>
-      <Subtitle>My name is Bilal and I'm a Front -end Developer.</Subtitle>
-      <Button>View My Work</Button>
+      <Subtitle>Bringing digital designs to life with creativity and code - the Front End Developer</Subtitle>
+      <NavLink to="/about">  <Button>View My Work</Button></NavLink>
+    
+      
     </Container>
   );
 };

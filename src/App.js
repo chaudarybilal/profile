@@ -5,8 +5,9 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 import { ThemeProvider } from "styled-components";
+import Footer from "./Footer";
 import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
@@ -43,7 +44,9 @@ function App() {
           <Route path="/services" Component={Services} />
           <Route path="/contact" Component={Contact} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
+  
       </ThemeProvider>
       
     </>

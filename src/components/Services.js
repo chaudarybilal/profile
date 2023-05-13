@@ -6,13 +6,19 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  padding: 2rem;
 `;
 
 const Title = styled.h1`
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Subtitle = styled.h2`
@@ -20,6 +26,10 @@ const Subtitle = styled.h2`
   font-weight: 500;
   text-align: center;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const ServicesContainer = styled.div`
@@ -46,6 +56,11 @@ const ServiceCard = styled.div`
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 1rem 0;
+  }
 `;
 
 const ServiceTitle = styled.h3`
@@ -53,12 +68,20 @@ const ServiceTitle = styled.h3`
   font-weight: 500;
   text-align: center;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const ServiceDescription = styled.p`
   font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const Services = () => {
