@@ -1,81 +1,73 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background: linear-gradient(45deg, #FF6B6B, #3E8DE6);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px;
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 `;
 
-const TextContainer = styled.div`
+const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+  height:60vh;
+`;
+
+const Card = styled.div`
+  background-color:#e8e8e8;
+  color: black;
+  padding: 20px;
   margin-bottom: 20px;
+  flex-basis: 100%;
+  animation: ${fadeIn} 1s ease-in;
 
   @media (min-width: 768px) {
-    margin-right: 40px;
-    margin-bottom: 0;
+    flex-basis: calc(50% - 10px);
   }
 `;
 
 const Title = styled.h2`
-  font-size: 24px;
-  font-weight: bold;
+  margin-top: 0;
+`;
+
+const Description = styled.p`
+  margin-bottom: 0;
+`;
+
+const SkillsList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+`;
+
+const SkillItem = styled.li`
   margin-bottom: 10px;
-  color: #fff;
-`;
-
-const Paragraph = styled.p`
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  color: #fff;
-`;
-
-const SkillList = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-
-const Skill = styled.li`
-  background-color: #eee;
-  padding: 5px 10px;
-  border-radius: 20px;
-  margin: 5px;
-  font-size: 14px;
 `;
 
 const About = () => {
   return (
     <CardContainer>
-      <TextContainer>
-        <Title>About Me</Title>
-        <Paragraph>
-        As a fresh Front End Developer, I am passionate about creating stunning and user-friendly web experiences. With a solid foundation in HTML, CSS, and JavaScript, I am eager to contribute my skills and knowledge to a dynamic and collaborative team. My strong attention to detail and creative problem-solving abilities make me a valuable asset to any project. I am excited to embark on a fulfilling career in web development and continue to grow my expertise.  
-         </Paragraph>
-      </TextContainer>
-      <SkillList>
-        <Skill>HTML</Skill>
-        <Skill>CSS</Skill>
-        <Skill>JavaScript</Skill>
-        <Skill>React</Skill>
-        <Skill>Responsive Design</Skill>
-        <Skill>UI/UX Design</Skill>
-      </SkillList>
+      <Card>
+        <Title>Introduction</Title>
+        <Description>
+        A dynamic front-end developer with a background in electrical engineering and a deep passion for web development. Combining my technical expertise and creativity, I have successfully transitioned into the world of coding to craft captivating portfolio websites. Through dedicated learning and hands-on experience, I have honed my skills in HTML, CSS, JavaScript, and various frameworks. With a problem-solving mindset and meticulous attention to detail, I strive to deliver visually stunning and user-friendly web experiences. I am excited to contribute my unique blend of engineering and web development skills to create innovative digital solutions
+      
+        </Description>
+      </Card>
+      <Card>
+        <Title>Skills</Title>
+        <SkillsList>
+          <SkillItem>HTML</SkillItem>
+          <SkillItem>CSS</SkillItem>
+          <SkillItem>JavaScript</SkillItem>
+          <SkillItem>React</SkillItem>
+          <SkillItem>Styled Components</SkillItem>
+        </SkillsList>
+      </Card>
     </CardContainer>
   );
 };

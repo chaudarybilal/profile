@@ -11,6 +11,7 @@ const Navigation = () => {
       display: flex;
       gap: 4.8rem;
       
+      
 
       li {
         list-style: none;
@@ -22,15 +23,18 @@ const Navigation = () => {
             text-decoration: none;
             font-size: 1.8rem;
             text-transform: uppercase;
-            color: ${({ theme }) => theme.colors.black};
+            ${'' /* color: ${({ theme }) => theme.colors.black}; */}
+            
             transition: color 0.3s linear;
+            color:white;
             
           
           }
 
           &:hover,
           &:active {
-            color: ${({ theme }) => theme.colors.helper};
+            ${'' /* color: ${({ theme }) => theme.colors.helper}; */}
+            color:white;
           }
         }
       }
@@ -52,11 +56,11 @@ const Navigation = () => {
       .mobile-navbar-btn {
         display: inline-block;
         z-index: 999;
-        border: ${({ theme }) => theme.colors.black};
+        border: ${({ theme }) => theme.colors.white};
 
         .mobile-nav-icon {
           font-size: 4.2rem;
-          color: ${({ theme }) => theme.colors.black};
+          color: ${({ theme }) => theme.colors.white};
         }
       }
 
@@ -67,8 +71,8 @@ const Navigation = () => {
         position: absolute;
         top: 0;
         left: 0;
-        background-color: #fff;
-
+        ${'' /* background-color: #fff; */}
+        background-color:rgb(64, 66, 88);
         display: flex;
         justify-content: center;
         align-content: center;
@@ -101,7 +105,7 @@ const Navigation = () => {
         position: absolute;
         top: 3%;
         right: 10%;
-        color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.white};
         z-index: 9999;
       }
 

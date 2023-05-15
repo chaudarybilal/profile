@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "styled-components"
+// import Button from "styled-components"
+// import SendIcon from '@mui/icons-material/Send';
+import Button from '@mui/material/Button';
 import { NavLink } from "react-router-dom";
+import FacebookIcon from '@mui/icons-material/Facebook';
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -15,8 +18,8 @@ const Footer = () => {
           </div>
 
           <div className="contact-short-btn">
-            <NavLink to="/">
-              <Button>Get Started</Button>
+            <NavLink to="/about">
+            <Button variant="contained" size="large">Get started</Button>
             </NavLink>
           </div>
         </div>
@@ -28,7 +31,7 @@ const Footer = () => {
         <div className="container grid grid-four-column">
           <div className="footer-about">
             <h3>Muhammad Bilal</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <p>Bringing digital designs to life with creativity and code - the Front End Developer</p>
           </div>
 
           {/* 2nd column */}
@@ -73,7 +76,7 @@ const Footer = () => {
         </div>
 
         {/* bottom section  */}
-        <div className="footer-bottom--section">
+        {/* <div className="footer-bottom--section">
           <hr />
           <div className="container grid grid-two-column">
             <p>
@@ -84,7 +87,7 @@ const Footer = () => {
               <p>TERMS & CONDITIONS</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </footer>
     </Wrapper>
   );
@@ -107,7 +110,7 @@ const Wrapper = styled.section`
 
   footer {
     padding: 14rem 0 9rem 0;
-    background-color:rgb(177, 208, 224);
+    background-color:rgb(107, 114, 142);
 
     h3 {
       color: ${({ theme }) => theme.colors.black};
@@ -123,11 +126,11 @@ const Wrapper = styled.section`
       div {
         padding: 1rem;
         border-radius: 50%;
-        border: 2px solid ${({ theme }) => theme.colors.black};
+        border: 2px solid ${({ theme }) => theme.colors.white};
 
         .icons {
-          color: ${({ theme }) => theme.colors.white};
-          background-color:black;
+          color: ${({ theme }) => theme.colors.black};
+          background-color:white;
           font-size: 2.4rem;
           position: relative;
           cursor: pointer;

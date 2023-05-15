@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <MainHeader>
       <NavLink to="/">
-      <h3> Muhammad Bilal</h3>
+        <h3>Muhammad Bilal</h3>
       </NavLink>
-      <Navigation/>
+      <Navigation />
     </MainHeader>
   );
 };
@@ -17,11 +17,20 @@ const Header = () => {
 const MainHeader = styled.header`
   padding: 0 4.8rem;
   height: 5rem;
-  ${'' /* background-color: ${({ theme }) => theme.colors.bg}; */}
-  background-color: rgb(26, 55, 77);
+  background-color:rgb(64, 66, 88);;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
 
   .logo {
     height: auto;

@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
+ 
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  height:80vh;
   padding: 2rem;
 `;
 
@@ -37,6 +39,9 @@ const ServicesContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height:70vh;
+  ${'' /* background-color:red; */}
+  
 `;
 
 const ServiceCard = styled.div`
@@ -45,11 +50,14 @@ const ServiceCard = styled.div`
   align-items: center;
   justify-content: center;
   width: 30%;
+  height:60vh;
   padding: 2rem;
   margin: 1rem;
-  background-color: #f2f2f2;
+  ${'' /* background-color: #f2f2f2; */}
+  ${'' /* background: linear-gradient(135deg, #ebadb6 0%, #aceae1 100%); */}
+  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 60px , -20px -20px 60px #ffffff;
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -87,7 +95,7 @@ const ServiceDescription = styled.p`
 const Services = () => {
   return (
     <Container>
-      <Title>My Services</Title>
+      <Title>Services</Title>
       <Subtitle>Here's what I can do for you</Subtitle>
       <ServicesContainer>
         <ServiceCard>

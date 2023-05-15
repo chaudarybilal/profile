@@ -8,7 +8,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color:rgb(64, 104, 130);
+  ${'' /* background-color:rgb(64, 104, 130); */}
   
 `;
 
@@ -46,7 +46,7 @@ const Home = () => {
     <Container>
       <Title>Welcome to My Portfolio</Title>
       <Subtitle>Bringing digital designs to life with creativity and code - the Front End Developer</Subtitle>
-      <NavLink to="/about">  <Button>View My Work</Button></NavLink>
+      <NavLink to="/about">  <Button>About Me</Button></NavLink>
     
       
     </Container>
